@@ -43,7 +43,7 @@ CTRL+SHIFT+P > Generate .editorconfig
     insert_final_newline = true
 
 ## Adicionar typescript e jest
-    npm i -D typescript jest @types/jest ts-node tsconfig-paths
+    npm i -D typescript jest @types/jest ts-jest ts-node tsconfig-paths
     npx tsc --init
 
 ## Adicionar linters: eslint + prettier

@@ -1,16 +1,31 @@
 import { Pokemon, Trainer } from '@entity';
 
-const pikachu: Pokemon = new Pokemon('Pikachu', 1);
-const charizard: Pokemon = new Pokemon('Charizard', 2);
-const dragonite: Pokemon = new Pokemon('Dragonite', 4);
-const abra: Pokemon = new Pokemon('Abra', 5);
-const kadabra: Pokemon = new Pokemon('Kadabra', 5);
-const alakazam: Pokemon = new Pokemon('Alakazam', 5);
+const pikachu: Pokemon = new Pokemon(1, 'Pikachu', 1);
+const charizard: Pokemon = new Pokemon(2, 'Charizard', 2);
+const dragonite: Pokemon = new Pokemon(3, 'Dragonite', 4);
+const abra: Pokemon = new Pokemon(4, 'Abra', 5);
+const kadabra: Pokemon = new Pokemon(5, 'Kadabra', 5);
+const alakazam: Pokemon = new Pokemon(6, 'Alakazam', 5);
+const bulbasaur: Pokemon = new Pokemon(7, 'Bulbasaur', 6);
 
-const trainer: Trainer = new Trainer('Bruno', 'Farias', 'BC');
-trainer.addPokemon(charizard);
-trainer.addPokemon(dragonite);
-trainer.addPokemons(abra, kadabra, alakazam);
+const trainer1: Trainer = new Trainer('Bruno', 'Farias', 'BC');
+trainer1.caughtPokemon(charizard);
+trainer1.caughtPokemon(dragonite);
+trainer1.caughtPokemons(abra, kadabra, alakazam, pikachu);
 
-console.log(trainer.toString());
-console.log(trainer.pokemons);
+trainer1.sendPokemonToPokedex(pikachu);
+trainer1.caughtPokemon(bulbasaur);
+
+// invalid
+// trainer1.getPokemons.push(pikachu);
+
+trainer1.releasePokemon(charizard);
+trainer1.releasePokemon(kadabra);
+// trainer1.releasePokemon(pikachu);
+
+console.log(trainer1.toString());
+console.log(trainer1.getPokemons);
+console.log(trainer1.getPokedex.getPokemons);
+
+// const trainer2: Trainer = new Trainer('Angeline', 'Farias', 'Angie');
+// trainer2.releasePokemon(alakazam);

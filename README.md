@@ -1,9 +1,9 @@
 # STEP BY STEP
 
 ## Adicionar as seguintes extensões no VS Code
-gitignore
-EditorConfig for VS Code
-Prettier
+1. gitignore
+2. EditorConfig for VS Code
+3. Prettier
 
 ## Estrutura básica (CA)
     ├───src
